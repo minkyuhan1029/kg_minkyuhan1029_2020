@@ -12,3 +12,16 @@ const phonetic = {
   "9" : "Nine"
 }
 
+const conversion = (inputs) => {
+  for(let i = 0; i < inputs.length; i++){
+    let string = ""
+    for(let j = 0; j < inputs[i].length; j++){
+      let digit = inputs[i][j]
+      string += phonetic[digit]
+    }
+    inputs[i] = string
+  }
+  console.log(inputs.join(', '))
+}
+
+conversion(numbers)
